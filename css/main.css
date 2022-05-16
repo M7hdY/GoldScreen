@@ -1,0 +1,276 @@
+/* Start Global Rule */
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Work Sans', sans-serif;
+}
+.header{
+    padding:5px;
+}
+:root{
+    --main-color:#008080;
+    --secound-color:black;
+    --content-background-color:#f6f6f6;
+}
+@media(max-width=768px){
+    .special-text h3{
+        font-size: 80px;
+    }
+}
+/* End of global Rule */
+/* --------------------------------------------------start header------------------------------------- */
+.header{
+    background-color: var(--main-color);
+}
+.header .container{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right:30px;
+    padding-left:30px;
+    margin-right: auto;
+    margin-left: auto;
+}
+@media (min-width: 768px) {
+    .container {
+      width: 750px;
+    }
+  }
+  /* Medium */
+  @media (min-width: 992px) {
+    .container {
+      width: 970px;
+    }
+  }
+  /* Large */
+  @media (min-width: 1200px) {
+    .container {
+      width: 1170px;
+    }
+  }
+  .logo{
+      width: 60px;
+  }
+  .logo-all{
+      display: flex;
+      flex-wrap: wrap;
+  }
+  .logo-all h1{
+      margin-left: 5px;
+  }
+  @media (max-width: 768px) {
+    .logo-all h1{
+        display: none;
+    }
+  }
+  .header .top-links{
+      position: relative;
+    }
+  .header .top-links:hover .icon span:nth-child(2){
+        width:100%;
+    }
+
+    .header .top-links:hover .list{
+        display: block;
+    }
+    .header .top-links .icon{
+    width: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}  
+    .top-links .list li:not(:last-child) a{
+        border-bottom: var(--main-color) solid 0.2px;
+    }
+    .header .top-links .icon span{
+    background-color: black;
+    margin-bottom: 5px;
+    height: 2px;
+    }
+    .header .top-links .icon span:first-child{
+    width: 100%;
+    }
+    .header .top-links .icon span:nth-child(2){
+    width: 60%;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+    .header .top-links .icon span:last-child{
+        width: 100%;
+    }
+    .top-links .list{
+    background-color: #f6f6f6;
+    list-style: none;
+    text-decoration: none;
+    padding: 0px;
+    margin: 0px;
+    min-width: 300px;
+    position: absolute;
+    right: 0px;
+    top:calc(100% + 20px);
+    display: none;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.top-links .list::before{
+    content: "";
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent #f6f6f6 transparent;
+    right: 4px;
+    bottom: calc(100% + 0px);
+}
+   .top-links .list li a{
+    display:block;
+    padding: 15px;
+    margin: 20px;
+    color: black;
+    text-decoration: none;
+    transition:0.3s;
+    -webkit-transition:0.3s;
+    -moz-transition:0.3s;
+    -ms-transition:0.3s;
+    -o-transition:0.3s;
+}
+.top-links .list li a:hover{
+    padding:25px;
+    font-weight: 700;
+}
+/* ----------------------------------------------------end of header -----------------------------------------------------*/
+
+/* -------------------------------------------------------Start landing-------------------------------------------------- */
+.landing{
+    background-image: url(../images/background2.jpg);
+    height: 100%;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* -------------------------------------------------------------end of landing------------------------------------------- */
+.features{
+    background-color:var(--main-color);
+    padding-top: 60px;
+    padding-bottom: 60px;
+    display:flex;
+    justify-content: center;
+}
+/* Now we start usig grid */
+.features .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(300px,1fr));
+    grid-gap: 20px;
+}
+.features .container .icon {
+    text-align: center;
+}
+.features .container .icon img{
+    filter: grayscale(100%);
+    width: 300px;
+    color:var(--main-color);
+    transition: 0.3s;
+    -webkit-filter: grayscale(100%);
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+.features .container .icon:hover img{
+    filter: none;
+    width: 320px;
+    -webkit-filter: none;
+}
+.features .container .icon h3{
+    font-weight: 800;
+}
+.features .container .icon p{
+    font-weight: 500px;
+    font-size: 19px;
+    color:rgb(0, 0, 0)
+}
+/* -------------------------------------------------------------end features-------------------------------------------- */
+.contact {
+    display:flex;
+    justify-content: center;
+    background-color:var(--content-background-color);
+    z-index: -2;
+}
+.contact .container{
+    padding-top:50px;
+    padding-bottom:50px;
+    padding-left: 15px;
+    }
+.contact .container h1{
+    color:var(--secound-color);
+}
+.contact .container h2{
+    color: var(--secound-color);
+    position: relative;
+}
+.contact .container h2::after{
+    content: "";
+    position: absolute;
+    width: 160px;
+    height: 16px;
+    background-color: white;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+.contact .container p{
+    font-size: 10px;
+}
+.contact .container .icon{
+    display:flex;
+    position: relative;
+    max-width: 185px;
+}
+.contact .container .links{
+    font-size: 10px;
+    margin-left: 5px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    top: 10px;
+}
+/* start footer */
+.footer{
+    display: flex;
+    justify-content: center;
+    background-color: var(--main-color);
+    height:60px
+}
+.footer .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer .container .text{
+    color:white;
+    display: flex;
+    font-weight: 800;
+}
+.footer .container div span{
+    color:var(--secound-color);
+}
+/* end footer */
