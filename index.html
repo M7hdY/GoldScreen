@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First One</title>
+    <!-- This Is The main Style Page  -->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- This is The Normalize StyleSheet -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- This is The Fonts Link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- start header -->
+    <div class="header">
+        <div class="container">
+            <div class="logo-all">
+                <img src="images/hd.png" alt="" class="logo">
+                <h1>Gold Screen</h1>
+            </div>
+            <div class="top-links">
+                <span class="icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+                <ul class="list">
+                    <li><a href="signin.html" target="_blank">login</a></li>
+                    <li><a href="Sign-Up.html">signup</a></li>
+                    <li><a href="MOVIES.html" target="_blank">Movies</a></li>
+                    <li><a href="Feedback.html" target="_blank">feedback</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- end of header -->
+    <!-- start of landing -->
+    <div class="landing">
+        <div class="w3-content w3-section" style="max-width:500px">
+            <img class="mySlides" src="images/IMG-20220515-WA0021.jpg" style="width:100%">
+            <img class="mySlides" src="images/IMG-20220515-WA0022.jpg" style="width:100%">
+            <img class="mySlides" src="images/IMG-20220515-WA0023.jpg" style="width:100%">
+            <img class="mySlides" src="images/IMG-20220515-WA0024.jpg" style="width:100%">
+            <img class="mySlides" src="images/IMG-20220515-WA0025.jpg" style="width:100%">
+            <img class="mySlides" src="images/IMG-20220515-WA0026.jpg" style="width:100%">
+            <img class="mySlides" src="images/IMG-20220515-WA0027.jpg" style="width:100%">
+          </div>
+          
+          <script>
+          var myIndex = 0;
+          carousel();
+          
+          function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+              x[i].style.display = "none";  
+            }
+            myIndex++;
+            if (myIndex > x.length) {myIndex = 1}    
+            x[myIndex-1].style.display = "block";  
+            setTimeout(carousel, 3000); // Change image every 2 seconds
+          }
+          </script>
+    </div>
+    <!-- end of landing -->
+    <!-- start featuers -->
+    <div class="features">
+        <div class="container">
+            <div class="icon">
+                <img src="images/1.jpg" alt="">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit
+                    . Deserunt vel possimus eveniet vero nemo, ducimus error earum ut tenetur quaerat? Nemo quam 
+                    corporis adipisci eos culpa ad eveniet vero necessitatibus.</p>
+            </div>
+            <div class="icon">
+                <img src="images/2.jpg" alt="">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit
+                    . Deserunt vel possimus eveniet vero nemo, ducimus error earum ut tenetur quaerat? Nemo quam 
+                    corporis adipisci eos culpa ad eveniet vero necessitatibus.</p>
+            </div>
+            <div class="icon">
+                <img src="images/3.jpg" alt="">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit
+                    . Deserunt vel possimus eveniet vero nemo, ducimus error earum ut tenetur quaerat? Nemo quam 
+                    corporis adipisci eos culpa ad eveniet vero necessitatibus.</p>
+            </div>
+        </div>
+    </div>
+    <!-- end featuers -->
+    <!-- start contact -->
+        <div class="contact" id="contact">
+            <div class="container">
+                <h1>Feel free to drop us a line at:</h1>
+                <h2>Goldscreen@gmail.com</h2>
+            </div>
+        </div>
+    <!-- end contact -->
+    <div class="footer">
+        <div class="container">
+            <div class="text">
+            &copy;2022-<div> <span>Gold Screen</span>,All Right rseserved</div>
+        </div>
+        </div>
+    </div>
+</body>
+</html>
